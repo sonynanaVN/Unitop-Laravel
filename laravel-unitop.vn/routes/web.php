@@ -29,4 +29,26 @@ Route::get('/', function () {
 // Route::resource('post', PostController::class);
 
 // Route::get('post/index', [PostController::class, 'index']);
-Route::get('admin/post/show', [AdminPostController::class, 'show']);
+// Route::get('admin/post/show', [AdminPostController::class, 'show']);
+Route::get('child',function () {
+    return view('child',['data' => '41','post_title' => 'Bài viết 1']);
+});
+Route::get('for',function () {
+    return view('for',['n' => 10]);
+});
+Route::get(('foreach'),function () {
+    $users = array(
+        1 => array(
+            'name' => 'Nguyễn Văn A',
+            'email' => 'A@gmail.com'
+        ),
+        2 => array(
+            'name' => 'Nguyễn Văn B',
+            'email' => 'B@gmail.com'
+        ),
+    );
+        return view('foreach', ['users' => $users]);
+});
+route::get('include', function () {
+    return view('include');
+});

@@ -22,6 +22,11 @@
         </div>
         <div id="footer">
             <h1>Footer</h1>
+            @section('footer')
+                <p>Day la noi dung footer</p>
+                <p>test1</p>
+                <p>test3</p>
+            @show
     </div>
 </body>
 </html>
