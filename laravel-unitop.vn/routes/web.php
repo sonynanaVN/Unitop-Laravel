@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -56,3 +56,11 @@ Route::get(('foreach'),function () {
 route::get('include', function () {
     return view('include');
 });
+route::get('users/insert', function () {
+    DB::table('users')->insert([
+        'name' => 'Nguyễn Văn B',
+        'email' => 'B@gmail.com',
+        'password' => bcrypt('123456')
+    ]);
+});
+route::get('post/add', [PostController::class, 'add']);
