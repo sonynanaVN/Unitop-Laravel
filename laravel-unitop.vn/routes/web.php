@@ -23,13 +23,17 @@ Route::get('/', function () {
 
 
 // Route::get('product/post/show/{id}', [ProductController::class, 'show']);
-// Route::get('product/post/create', [ProductController::class, 'create']);
+// Route::get('product/post/add', [ProductController::class, 'add']);
 // Route::get('product/post/update/{id}', [ProductController::class, 'update']);
 // Route::get('product/post/delete/{id}', [ProductController::class, 'delete']);
 // Route::resource('post', PostController::class);
 
 // Route::get('post/index', [PostController::class, 'index']);
-// Route::get('admin/post/show', [AdminPostController::class, 'show']);
+// Sửa bài tập 7 view
+Route::get('admin/post/show', [AdminPostController::class, 'show']);
+Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
+Route::get('admin/post/add', [AdminPostController::class, 'add']);
+
 Route::get('child',function () {
     return view('child',['data' => '41','post_title' => 'Bài viết 1']);
 });

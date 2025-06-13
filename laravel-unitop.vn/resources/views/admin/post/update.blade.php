@@ -1,0 +1,1 @@
+<h1>cập nhật bài viết:{{$id}}</h1>
